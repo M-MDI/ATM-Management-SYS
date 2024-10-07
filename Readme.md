@@ -2,7 +2,7 @@
 
 ## Authors
 
-- **Mehdi** - Project creator and developer
+- **M-MDI** - Project developer
 
 ## Overview
 
