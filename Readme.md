@@ -1,49 +1,115 @@
-# ATM Management System
+# ATM Management System 🏦
 
-## Authors
+A robust C-based ATM management system that simulates real-world banking operations with enhanced security features.
 
-- **M-MDI** - Project developer
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## Overview
+## 🌟 Features
 
-This project is an ATM management system built in C. The system allows users to perform several operations such as:
-- Registering new users
-- Creating and updating accounts
-- Viewing account details
-- Performing transactions (deposit/withdrawal)
-- Deleting accounts
-- Transferring account ownership between users
+### Core Banking Operations
+- 💳 Account Management
+  - Create new accounts
+  - View account details
+  - Update account information
+  - Delete accounts
+  
+- 💰 Financial Transactions
+  - Deposit funds
+  - Withdraw money
+  - Transfer between accounts
+  
+- 👤 User Management
+  - Secure user registration
+  - Authentication system
+  - Account ownership transfer
+  
+### Security & Performance
+- 🔐 Enhanced Security
+  - Password encryption
+  - Duplicate username prevention
+  - Secure login validation
 
-### Features Implemented
+- 🚀 Real-time Features
+  - Instant notifications via pipes
+  - Multi-process architecture
+  - Efficient data handling
 
-1. **User Registration**
-   - Unique user registration with validation to ensure no duplicate usernames.
+## 🛠️ Technical Implementation
 
-2. **Login**
-   - Allows users to securely log into the system by verifying their credentials.
+### User Management System
+- Unique username validation
+- Secure credential verification
+- Profile management capabilities
 
-3. **Account Creation**
-   - Users can create new bank accounts associated with their profile.
+### Account Operations
+- Multiple account types support
+- Transaction validation rules
+- Real-time balance updates
 
-4. **Check Account Details**
-   - Displays specific account information based on the account ID.
+### Security Features
+- Advanced password encryption
+- Secure data storage
+- Protected transaction processing
 
-5. **Update Account Information**
-   - Users can update the country or phone number for their accounts.
+### Notification System
+- Inter-process communication (IPC)
+- Real-time ownership transfer alerts
+- System status notifications
 
-6. **Make Transactions**
-   - Deposit and withdraw money from accounts (restrictions for certain account types).
+## 🚀 Getting Started
 
-7. **Account Removal**
-   - Users can remove their accounts.
+```bash
+# Clone the repository
+git clone https://github.com/M-MDI/atm-management.git
 
-8. **Transfer Account Ownership**
-   - Users can transfer account ownership to another registered user.
+# Navigate to project directory
+cd atm-management
 
-### Bonus Features
+# Compile the project
+make
 
-- **Instant Notification Using Pipes and Child Processes**
-  - Users are instantly notified when they receive ownership of an account.
+# Run the application
+./atm
+```
 
-- **Encryption of Passwords**
-  - User passwords are encrypted to enhance security.
+## 💡 Usage
+
+1. **Register a New Account**
+   ```
+   Choose option 1 from main menu
+   Follow the registration prompts
+   ```
+
+2. **Login to Existing Account**
+   ```
+   Choose option 2 from main menu
+   Enter credentials when prompted
+   ```
+
+3. **Perform Transactions**
+   ```
+   Select transaction type
+   Follow the guided process
+   Confirm transaction details
+   ```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## ✍️ Author
+
+**M-MDI** - *Project Developer*
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Thanks to all contributors who helped in testing and improving the system
+- Special thanks to the open-source community for their valuable tools and libraries
