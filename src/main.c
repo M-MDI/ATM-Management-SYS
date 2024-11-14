@@ -3,52 +3,75 @@
 void mainMenu(struct User u)
 {
     int option;
-    system("clear");
-    printf("\n\n\t\t======= ATM =======\n\n");
-    printf("\n\t\t-->> Feel free to choose one of the options below <<--\n");
-    printf("\n\t\t[1]- Create a new account\n");
-    printf("\n\t\t[2]- Update account information\n");
-    printf("\n\t\t[3]- Check accounts\n");
-    printf("\n\t\t[4]- Check list of owned account\n");
-    printf("\n\t\t[5]- Make Transaction\n");
-    printf("\n\t\t[6]- Remove existing account\n");
-    printf("\n\t\t[7]- Transfer ownership\n");
-    printf("\n\t\t[8]- Exit\n");
+    clearScreen();
+    printf("\033[95m");
+      printf("              ╔═════════════════════════════════════════════════════╗\n");
+    printf("              ║                                                     ║\n");
+    printf("              ║                ======= ATM =======                  ║\n");
+    printf("              ║                                                     ║\n");
+    printf("              ║                                                     ║\n");
+    printf("              ║═════════════════════════════════════════════════════║\n");
+    printf("              ║═════════════════════════════════════════════════════║\n");
+    printf("              ║ ->> Feel free to choose one of the options below <<-║\n");
+    printf("              ║                                                     ║\n");
+    printf("              ║═════════════════════════════════════════════════════║\n");
+    printf("              ║ [1] - Create a new account                          ║\n");
+    printf("              ║═════════════════════════════════════════════════════║\n");
+    printf("              ║ [2] - Update account information                    ║\n");
+    printf("              ║═════════════════════════════════════════════════════║\n");
+    printf("              ║ [3] - Check accounts                                ║\n");
+    printf("              ║═════════════════════════════════════════════════════║\n");
+    printf("              ║ [4] - Check list of owned accounts                  ║\n");
+    printf("              ║═════════════════════════════════════════════════════║\n");
+    printf("              ║ [5] - Make Transaction                              ║\n");
+    printf("              ║═════════════════════════════════════════════════════║\n");
+    printf("              ║ [6] - Remove existing account                       ║\n");
+    printf("              ║═════════════════════════════════════════════════════║\n");
+    printf("              ║ [7] - Transfer ownership                            ║\n");
+    printf("              ║═════════════════════════════════════════════════════║\n");
+    printf("              ║ [8] - Exit                                          ║\n");
+    printf("              ║                                                     ║\n");
+    printf("              ╚═════════════════════════════════════════════════════╝\n\n\n");
+    printf("              ========> ");
+    printf("\033[39m");
     scanf("%d", &option);
 
     switch (option)
     {
     case 1:
+        clearScreen();
         createNewAcc(u);
         break;
     case 2:
-        // student TODO : add your **Update account information** function
-        // here
+    clearScreen();
+       updateAccount(u);
         break;
     case 3:
-        // student TODO : add your **Check the details of existing accounts** function
-        // here
+    clearScreen();
+        checkAccountInfo(u);
         break;
     case 4:
+        clearScreen();
         checkAllAccounts(u);
         break;
     case 5:
-        // student TODO : add your **Make transaction** function
-        // here
+    clearScreen();
+        makeTransaction(u);
         break;
     case 6:
-        // student TODO : add your **Remove existing account** function
-        // here
+    clearScreen();
+        removeAccount(u);
         break;
     case 7:
-        // student TODO : add your **Transfer owner** function
-        // here
+    clearScreen();
+        transferOwner(u);
         break;
     case 8:
         exit(1);
         break;
     default:
-        printf("Invalid operation!\n");
+            printf("\nInvalid choice.\n");
+            mainMenu(u);
     }
 };
 
@@ -56,33 +79,35 @@ void initMenu(struct User *u)
 {
     int r = 0;
     int option;
-    system("clear");
-    printf("\n\n\t\t======= ATM =======\n");
-    printf("\n\t\t-->> Feel free to login / register :\n");
-    printf("\n\t\t[1]- login\n");
-    printf("\n\t\t[2]- register\n");
-    printf("\n\t\t[3]- exit\n");
+    clearScreen();
+    printf("\033[95m");
+   printf("              ╔═════════════════════════════════════════════╗\n");
+    printf("              ║             ======= ATM =======             ║\n");
+    printf("              ║                                             ║\n");
+    printf("              ║                                             ║\n");
+    printf("              ║       -->> Feel free to login / register :  ║\n");
+    printf("              ║                                             ║\n");
+    printf("              ║                [1] - Login                  ║\n");
+    printf("              ║                                             ║\n");
+    printf("              ║                [2] - Register               ║\n");
+    printf("              ║                                             ║\n");
+    printf("              ║                [3] - Exit                   ║\n");
+    printf("              ║                                             ║\n");
+    printf("              ╚═════════════════════════════════════════════╝\n\n\n");
+    printf("              ========> ");
+    printf("\033[39m");
     while (!r)
     {
         scanf("%d", &option);
         switch (option)
         {
         case 1:
-            loginMenu(u->name, u->password);
-            if (strcmp(u->password, getPassword(*u)) == 0)
-            {
-                printf("\n\nPassword Match!");
-            }
-            else
-            {
-                printf("\nWrong password!! or User Name\n");
-                exit(1);
-            }
+            login(u->name, u->password);
             r = 1;
             break;
         case 2:
-            // student TODO : add your **Registration** function
-            // here
+           clearScreen();
+            registerMenu(u->name, u->password);
             r = 1;
             break;
         case 3:
@@ -90,6 +115,7 @@ void initMenu(struct User *u)
             break;
         default:
             printf("Insert a valid operation!\n");
+            exit(0);
         }
     }
 };
@@ -100,5 +126,6 @@ int main()
     
     initMenu(&u);
     mainMenu(u);
+
     return 0;
 }
