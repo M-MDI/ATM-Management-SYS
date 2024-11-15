@@ -1125,6 +1125,5 @@ void displayInterestInfo(struct Record r) {
         printf("     ║ You will not get interests because    ║\n");
         printf("     ║ the account is of type current        ║\n");
     }
-    
     printf("     ╚═══════════════════════════════════════╝\n");
 }
