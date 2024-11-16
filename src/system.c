@@ -1109,6 +1109,7 @@ void displayInterestInfo(struct Record r) {
         printf("     ║ Maturity Date: %02d/%02d/%-15d  ║\n", 
                r.deposit.day, r.deposit.month, r.deposit.year + 2);
     }
+    
     else if (strcmp(r.accountType, "fixed03") == 0) {
         interestRate = 0.08; 
         monthlyInterest = (r.amount * interestRate) * 3;
