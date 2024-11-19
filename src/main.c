@@ -5,7 +5,7 @@ void mainMenu(struct User u)
     int option;
     clearScreen();
     printf("\033[95m");
-      printf("              ╔═════════════════════════════════════════════════════╗\n");
+    printf("              ╔═════════════════════════════════════════════════════╗\n");
     printf("              ║                                                     ║\n");
     printf("              ║                ======= ATM =======                  ║\n");
     printf("              ║                                                     ║\n");
@@ -81,7 +81,7 @@ void initMenu(struct User *u)
     int option;
     clearScreen();
     printf("\033[95m");
-   printf("              ╔═════════════════════════════════════════════╗\n");
+    printf("              ╔═════════════════════════════════════════════╗\n");
     printf("              ║             ======= ATM =======             ║\n");
     printf("              ║                                             ║\n");
     printf("              ║                                             ║\n");
